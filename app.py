@@ -17,11 +17,11 @@ db = SQLAlchemy(app)
 
 class Customer(db.Model):
     id = db.Column(db.Integer, primary_key=True) 
-    first_name = db.Column(db.String(50), nullable=False)
-    last_name = db.Column(db.String(50), nullable=False)
+    first_name = db.Column(db.String(150), nullable=False)
+    last_name = db.Column(db.String(150), nullable=False)
     address = db.Column(db.String(500), nullable=False)
     city = db.Column(db.String(50), nullable=False)
-    postcode = db.Column(db.String(50), nullable=False)
+    postcode = db.Column(db.String(150), nullable=False)
     email = db.Column(db.String(50), nullable=False, unique=True)
 
     orders = db.relationship('Order', backref='customer')
