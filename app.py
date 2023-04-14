@@ -123,6 +123,14 @@ def add_order_products():
     db.session.commit()
 
 
+def update_customer():
+    customer = Customer.query.filter(id=1).first()
+    customer.city = 'salt lake'
+
+    db.session.add(customer)
+    db.session.commit()
+
+
 def create_random_data():
     db.create_all()
     add_customers()
