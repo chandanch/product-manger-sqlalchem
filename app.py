@@ -126,8 +126,6 @@ def add_order_products():
 def update_customer():
     customer = Customer.query.filter(id=1).first()
     customer.city = 'salt lake'
-
-    db.session.add(customer)
     db.session.commit()
 
 
