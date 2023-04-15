@@ -160,6 +160,10 @@ def get_pending_orders():
     for order in pending_orders:
         print(order.order_date)
 
+def get_high_value_products():
+    products = Product.query.filter(Product.price > 50).all()
+    for product in products:
+        print(product.name)
 
 def how_many_customers():
     print("How many customers?")
