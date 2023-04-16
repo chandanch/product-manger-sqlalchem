@@ -165,6 +165,9 @@ def get_high_value_products():
     for product in products:
         print(product.name)
 
+def get_orders_count():
+    print(Order.query.count())
+
 def how_many_customers():
     print("How many customers?")
     print(Customer.query.count())
